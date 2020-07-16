@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import requests
 import base64
+from xml.dom.minidom import parseString
 
 def getLyrics(lId=2605732):
     clientAppId = open('clientAppId').readline().strip('\n')
@@ -18,4 +19,4 @@ def getLyrics(lId=2605732):
 
 if __name__ == "__main__":
     lId = input("Please input Lyric ID from Petit Lyrics: ")
-    print(getLyrics(lId=lId))
+    print(parseString(getLyrics(lId=lId)).toprettyxml())

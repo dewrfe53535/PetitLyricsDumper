@@ -140,3 +140,8 @@ temp*
 
 # VS Code
 .vscode/
+.idea/
+test - 副本
+test
+*.lrc
+*.xml
